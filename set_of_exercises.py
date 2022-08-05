@@ -88,3 +88,67 @@ liste = functie([1, 2, 3, 4], [4, 5, 6, 7])
 print(liste) 
             
 
+# 8. Write a program to find how many times substring “Emma” appears in the given string.
+# 8.A. Varianta relativa CPP:
+str_x = "Emmaa is a goEmmaod developer. Emma is a writer."
+a = str_x.split(" ")
+b = 0
+for nume in a:
+    if "Emma" in nume:
+        b = b + 1
+print(b)
+
+
+
+# 8.B. The Pythonic way:
+str_x = "Emmaa is a goEmmaod developer. Emma is a writer."
+a = str_x.count("Emma")
+print(a)
+
+
+
+
+
+# 9. Given two lists of numbers, write a program to create a new list. The new list should contain odd numbers from the first list and even numbers from the second list.
+
+# 9.A. Varianta clasica (doua for-uri):
+a = [10, 20, 25, 30, 35]
+b = [40, 45, 60, 75, 90]
+lista = []
+for numar in a:
+    if numar % 2 == 1:
+        lista.append(numar)
+for numar2 in b:
+    if numar2 % 2 == 0:
+        lista.append(numar2)
+
+print(lista)
+
+
+
+
+
+# 9.B. Varianta simpla:
+a = [10, 20, 25, 30, 35]
+b = [40, 45, 60, 75, 90]
+lista = []
+for numar in range(len(a)):
+    if a[numar] % 2 == 1:
+        lista.append(a[numar])
+    if b[numar] % 2 == 0:
+        lista.append(b[numar])
+
+print(lista)
+
+
+
+# 10. Write a function to return True if the first and last number of a given list is same. If numbers are different then return False.
+# a = [10, 20, 30, 40, 10]
+# b = [75, 65, 35, 75, 30]
+def functie(a):
+    if a[0] == a[-1]:
+        return True
+    else:
+        return False
+lista = functie([10, 20, 30, 40, 10])
+print(lista)
