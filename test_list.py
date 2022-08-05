@@ -9,12 +9,3 @@ produs = 1 # Definesc variabila care ma ajuta sa calculez produsul
 for numar in a: 
     produs = produs * numar
 print (produs)
-
-
-
-
-
-
-
-
-
