@@ -8,3 +8,5 @@ git add .
 git commit -m "Test git"
 
 git push origin main 
+
+cat ~/.ssh/id_rsa.pub
