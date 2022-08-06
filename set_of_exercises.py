@@ -89,6 +89,7 @@ print(liste)
             
 
 # 8. Write a program to find how many times substring “Emma” appears in the given string.
+
 # 8.A. Varianta relativa CPP:
 str_x = "Emmaa is a goEmmaod developer. Emma is a writer."
 a = str_x.split(" ")
@@ -152,3 +153,18 @@ def functie(a):
         return False
 lista = functie([10, 20, 30, 40, 10])
 print(lista)
+
+
+
+
+
+# 11. Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+def functie(x):
+    lista1 = []
+    for numar in x:
+        if numar not in lista1:
+            lista1.append(numar)
+    return lista1
+lista2 = functie([1, 2, 3, 3, 3, 3, 4, 5])
+print(lista2)
