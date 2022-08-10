@@ -1,2 +1,0 @@
-with open("Gigea.txt", "w") as Fisier:    # With open(nume fisier + comanda) as "Ce nume vreau eu" = Creare fisier + scriere text.
-    Fisier.write("Managerul tau este Dumnezeu") # Comanda ce ma ajuta sa introduc textul dorit in fisier.
