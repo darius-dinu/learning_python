@@ -199,4 +199,83 @@ def functie(a, b):
 
 f = functie([1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
 print(f)
+
+
+
+# 14. Write a program that displays the even numbers between 1-10:
+count = 0
+for numar in range(1, 10):
+    if numar % 2 == 0:
+        print(numar)
+        count = count + 1
+print ("We've got " + str(count) + " even numbers")
                 
+
+
+# 15. The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation.
+#     We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
+
+def sleep_in(weekday, vacation):
+    if weekday == False and vacation == True:
+        return True
+    elif weekday == True and vacation == False:
+        return False
+    else:
+        return True
+
+
+
+# 16. Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+def string_times(str, n):
+    times = 0
+    final = ""
+    while times < n:
+        final = final + str
+        times = times + 1
+    return final
+
+print(string_times("Hi", 4))
+
+
+
+# 17. Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+def hello_name(name):
+    Greeting = "Hello " + name + "!"
+    return Greeting 
+
+print(hello_name("Darius"))
+
+
+
+
+# 18. Given an array of ints, return True if 6 appears as either the first or last element in the array. The array will be length 1 or more.
+def first_last6(nums):
+    for numar in nums:
+        if nums[0] == 6 or nums[-1] == 6:
+            return True
+    else:
+        return False
+
+print(first_last6([1, 2, 6, 4, 5]))
+
+
+# 19. Given a string, return a string where for every char in the original, there are two chars.
+def double_char(str):
+    intors = ""
+    for litera in str:
+        intors = intors + litera * 2
+    return intors
+
+print(double_char("Salut"))
+
+# 20. Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+
+def count_evens(nums):
+    count = 0
+    for numar in nums:
+        if numar % 2 == 0:
+            count = count + 1
+    return count
+
+print(count_evens([1, 2, 3, 4, 5]))
