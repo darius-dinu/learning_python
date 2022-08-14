@@ -332,3 +332,94 @@ def extra_end(str):
         return False
 
 print(extra_end("Candy"))
+
+
+
+# 24. Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
+
+def without_end(str):
+    if len(str) < 2:
+        return False
+    else:
+        str = str[1 : -1]
+    return str
+
+print(without_end("java"))
+
+
+# 25. Given 2 strings, a and b, return a string of the form short+long+short
+#     with the shorter string on the outside and the longer string on the inside. 
+#     The strings will not be the same length, but they may be empty (length 0).
+
+def combo_string(a, b):
+    if len(a) != len(b):
+        if len (a) > len (b):
+            return b + a + b
+        else:
+            return a + b + a
+
+print(combo_string("aaa", "1234"))
+
+
+
+
+
+# 26. Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+
+def non_start(a, b):
+    intors = ""
+    if len(a) > 0 and len(b) > 0:
+        intors = a[1:] + b[1:]
+    return intors
+
+print(non_start("Hello", "There"))
+
+
+
+# 27. Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
+
+def left2(str):
+    intors = ""
+    if len(str) > 1:
+        intors = str[2:] + str[0] + str[1]
+    return intors
+
+print(left2("Hello"))
+
+
+
+# 28. Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+
+def make_abba(a, b):
+    intors = a + b + b + a
+    return intors
+
+print(make_abba("Hi", "Bye"))
+
+
+# 29. Given a string, return a new string where "not " has been added to the front.
+#     However, if the string already begins with "not", return the string unchanged.
+
+def not_string(str):
+    intors = "not " + str
+    if str[:3] == "not":
+        return str
+    else:
+        return intors
+
+print(not_string("not bad"))
+
+
+
+# 30. Given a string, return a new string where the first and last chars have been exchanged.
+
+def front_back(str):
+    if len(str) > 1:
+        uc = str[-1]
+        pc = str[0]
+        str = uc + str[1:-1] + pc
+        return str
+    else:
+        return str
+
+print(front_back("Hello"))
