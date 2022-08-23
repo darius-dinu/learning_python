@@ -447,3 +447,134 @@ for i in lista:
 print(count)
 
 
+
+# 33. Write a function named capital_indexes. The function takes a single parameter, which is a string. 
+#     Your function should return a list of all the indexes in the string that have capital letters.
+
+def capital_indexes(a):
+    lista = []
+    for i in range(len(a)):
+        if a[i].isupper ():
+            lista.append(i)
+    return lista
+print(capital_indexes("HeLlO"))
+
+
+
+# 34. Write a function named mid that takes a string as its parameter. 
+#     Your function should extract and return the middle letter. If there is no middle letter, your function should return the empty string.
+
+def mid(a):
+    if len(a) % 2 == 1:
+            return a[int(len(a) / 2)]
+    else:
+        return ""
+
+print(mid("abc"))
+
+
+
+# 35. Write a function named online_count that takes one parameter. 
+#     The parameter is a dictionary that maps from strings of names to the string "online" or "offline", as seen above.
+
+def online_count(a):
+    count = 0
+    for i in a.values():    # .values - accesez parametrul "y" din dictionar
+        if i == "online":
+            count += 1
+    return count
+
+statuses = {
+    "Alice": "online",
+    "Bob": "offline",
+    "Eve": "online",
+}
+print(online_count(statuses))
+
+
+
+
+
+
+# 36. Write a function named only_ints that takes two parameters. 
+#     Your function should return True if both parameters are integers, and False otherwise.
+#     For example, calling only_ints(1, 2) should return True, while calling only_ints("a", 1) should return False.
+
+def only_ints(a, b):
+    if type(a) == int and type(b) == int:    #type - functie ce imi permite sa verific tipul variabilei date
+        return True
+    else:
+        return False
+
+print(only_ints(1, 2))  # Aici intoarce "True"
+print (only_ints(1, "a"))   # Aici intoarce "False"
+
+
+
+
+
+
+# 37. Define a function named double_letters that takes a single parameter. 
+#     The parameter is a string. Your function must return True if there are two identical letters in a row in the string, and False otherwise.
+
+def double_letters(a):
+    for i in range(len(a)):
+        if i != len(a) - 1:
+            if a[i] == a[i + 1]:
+                return True
+    
+    return False
+
+print(double_letters("Hello"))  # Aici intoarce "True"
+print(double_letters("nono"))   # Aici intoarce "False"
+
+
+
+# 38. Define a function named count that takes a single parameter. The parameter is a string. 
+#     The string will contain a single word divided into syllables by hyphens, such as these: "ho-tel", "cat", "met-a-phor", etc.
+
+def count(a):
+    lista = a.split("-")
+    return len(lista)
+
+print(count("ho-tel"))      # Aici intoarce 2
+print(count("cat"))         # Aici intoarce 1
+print(count("met-a-phor"))  # Aici intoarce 3
+
+
+
+
+# 39. Define a function named largest_difference that takes a list of numbers as its only parameter.
+#     Your function should compute and return the difference between the largest and smallest number in the list.
+
+def largest_difference(a):
+    max = a[0]
+    for numar in a:
+        if numar > max:
+            max = numar
+    min = a[0]
+    for numar2 in a:    
+        if numar2 < min:
+            min = numar2
+    return max - min
+
+print(largest_difference([1, 2, 3]))   # Aici intoarce 2
+print(largest_difference([3, 6, 9]))   # Aici intoarce 6
+print(largest_difference([4, 8, 12]))  # Aici intoarce 8
+
+
+
+
+
+# 40. Define a function named triple_and that takes three parameters and returns True only if they are all True and False otherwise.
+
+def triple_and(a, b, c):
+    if a == True and b == True and c == True:
+        return True
+    else:
+        return False
+
+print(triple_and(True, True, True))        # Aici intoarce True
+print(triple_and(True, False, True))       # Aici intoarce False
+print(triple_and(False, True, False))      # Aici intoarce False
+print(triple_and(False, False, False))     # Aici intoarce False
