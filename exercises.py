@@ -578,3 +578,17 @@ print(triple_and(True, True, True))        # Aici intoarce True
 print(triple_and(True, False, True))       # Aici intoarce False
 print(triple_and(False, True, False))      # Aici intoarce False
 print(triple_and(False, False, False))     # Aici intoarce False
+
+
+
+
+
+# 41. Write a Python program that removes empty strings from a list of strings.
+
+def empty_remove(a):
+    for i in a:
+        if i == "":
+            a.remove(i)
+    return a
+
+print(empty_remove(["Mike", "", "Emma", "Kelly", "", "Brad"]))
