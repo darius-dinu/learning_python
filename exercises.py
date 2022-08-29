@@ -584,6 +584,7 @@ print(triple_and(False, False, False))     # Aici intoarce False
 
 
 # 41. Write a Python program that removes empty strings from a list of strings.
+# a. Varianta fara lista noua
 
 def empty_remove(a):
     for i in a:
@@ -592,3 +593,29 @@ def empty_remove(a):
     return a
 
 print(empty_remove(["Mike", "", "Emma", "Kelly", "", "Brad"]))
+
+
+# b. Varianta cu lista noua
+
+def empty_remove(a):
+    intors = []
+    for i in a:
+        if i != "":
+            intors.append(i)
+    return intors
+
+print(empty_remove(["Mike", "", "Emma", "Kelly", "", "Brad"]))
+
+
+
+
+# 42 . Write a Python program to check whether the given integer is a multiple of 5
+
+try:
+    a = int(input("Introdu un numar: "))
+    if a % 5 == 0:
+        print(str(a) + " este divizibil cu 5.")
+    else:
+        print(str(a) + " nu este divizibil cu 5.")
+except ValueError:
+    print("Input-ul tau nu este un numar!")
